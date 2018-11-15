@@ -81,7 +81,7 @@ public class RiesgoFormulario extends AppCompatActivity {
     }
 
     //Método para guardar temporalmete los datos de está Activity
-    private void inputData() {
+     private void inputData() {
         TipoDeProducto.encargo.setCantidad(txtCantidad.getText().toString());
         TipoDeProducto.encargo.setEscalaDeRiesgo(String.valueOf(sbRiesgo.getProgress()));
         TipoDeProducto.encargo.setTipoRiesgo(spTipoM.getSelectedItem().toString());
