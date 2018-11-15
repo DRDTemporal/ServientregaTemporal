@@ -21,6 +21,7 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
     Button btnPaquete;
     android.support.v4.app.FragmentManager manager;
     TextView txtTitulo;
+    public static TipoDeProducto tipoDeProducto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +30,7 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
         initialize();
         manager.beginTransaction().replace(R.id.fragment, new EncargoFragment()).commit();
         txtTitulo.setText("Documento");
-
+        tipoDeProducto = this;
 
     }
 
