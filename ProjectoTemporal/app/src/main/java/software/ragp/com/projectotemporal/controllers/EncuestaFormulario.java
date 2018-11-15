@@ -27,6 +27,8 @@ public class EncuestaFormulario extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_encuesta_formulario);
         inizialite();
         inputList();

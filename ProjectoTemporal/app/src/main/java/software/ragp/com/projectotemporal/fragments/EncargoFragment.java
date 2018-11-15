@@ -71,7 +71,8 @@ public class EncargoFragment extends Fragment implements View.OnClickListener {
     }
 
     public  void validar() {
-        if (!txtPeso.getText().equals(""))
+        validaciones=0;
+        if (!txtPeso.getText().toString().equals(""))
         {
             validaciones++;
         }
@@ -79,7 +80,7 @@ public class EncargoFragment extends Fragment implements View.OnClickListener {
         {
             txtPeso.setError("Debe ingresar el peso del objeto");
         }
-        if(!txtValor.getText().equals(""))
+        if(!txtValor.getText().toString().equals(""))
         {
             validaciones++;
         }

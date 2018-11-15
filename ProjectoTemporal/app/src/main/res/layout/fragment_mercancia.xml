@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,135 +8,230 @@
     tools:context=".fragments.MercanciaFragment">
 
 
-    <EditText
-        android:id="@+id/txtPeso"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/peso"
-        android:inputType="textPersonName|number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/txtLargo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/largo"
-        android:inputType="textPersonName|number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPeso" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/txtAlto"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/alto"
-        android:inputType="textPersonName|number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLargo" />
+            <EditText
+                android:id="@+id/txtPeso"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/btn_form"
+                android:ems="10"
+                android:hint="@string/peso"
+                android:inputType="textPersonName|number"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/txtAncho"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/ancho"
-        android:inputType="textPersonName|number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAlto" />
+        </RelativeLayout>
 
-    <EditText
-        android:id="@+id/txtValorA"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/valord"
-        android:inputType="textPersonName|number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAncho" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center_vertical"
-        android:text="Origen"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtValorA" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/txtValorA" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center_vertical"
-        android:text="Destino"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            <EditText
+                android:id="@+id/txtLargo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/btn_form"
+                android:ems="10"
+                android:hint="@string/largo"
+                android:inputType="textPersonName|number"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
-    <Button
-        android:id="@+id/btnSiguienteMercancia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtAlto"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/btn_form"
+                android:ems="10"
+                android:hint="@string/alto"
+                android:inputType="textPersonName|number"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtAncho"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/btn_form"
+                android:ems="10"
+                android:hint="@string/ancho"
+                android:inputType="textPersonName|number"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtValorA"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:ems="10"
+                android:background="@drawable/btn_form"
+                android:hint="@string/valord"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:inputType="textPersonName|number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/btn_form">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="80dp"
+                    android:textColor="#000"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center_vertical"
+                    android:text="Origen:"
+                    android:textSize="15dp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="282dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_toEndOf="@+id/textView" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/btn_form">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:textColor="#000"
+                android:text="Destino:"
+                android:textSize="15dp" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="268dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toEndOf="@+id/textView1" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnSiguienteMercancia"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="42dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/siguiente" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
