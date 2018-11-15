@@ -1,29 +1,22 @@
-package software.ragp.com.projectotemporal;
+package software.ragp.com.projectotemporal.controllers;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 
-import software.ragp.com.projectotemporal.controllers.TipoDeProducto;
+import software.ragp.com.projectotemporal.R;
 
-public class MainActivity extends AppCompatActivity {
+public class TipoDeProducto extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_tipo_de_producto);
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        getSupportActionBar().setTitle("Inicio");
-        getSupportActionBar().setIcon(R.drawable.inicio);
-
+        getSupportActionBar().setLogo(R.drawable.cajalista);
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -41,10 +34,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    public void enviar(View view) {
-        Intent intent = new Intent(MainActivity.this, TipoDeProducto.class);
-        startActivity(intent);
     }
 }
