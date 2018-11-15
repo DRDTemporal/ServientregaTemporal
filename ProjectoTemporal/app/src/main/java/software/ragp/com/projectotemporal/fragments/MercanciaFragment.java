@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import software.ragp.com.projectotemporal.R;
 import software.ragp.com.projectotemporal.controllers.EncuestaFormulario;
+import software.ragp.com.projectotemporal.controllers.RiesgoFormulario;
 import software.ragp.com.projectotemporal.controllers.TipoDeProducto;
 import software.ragp.com.projectotemporal.models.Constans;
 import software.ragp.com.projectotemporal.models.Encargo;
@@ -23,12 +25,13 @@ import software.ragp.com.projectotemporal.models.Encargo;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MercanciaFragment extends Fragment {
+public class MercanciaFragment extends Fragment{
 
     View view;
     EditText txtPeso, txtLargo, txtAlto, txtAncho, txtValor;
     Spinner spinner1, spinner2;
     Encargo encargo = new Encargo();
+    Button btnSiguienteMercancia;
     int nValidar;
     public MercanciaFragment() {
         // Required empty public constructor
@@ -53,6 +56,7 @@ public class MercanciaFragment extends Fragment {
         txtValor = view.findViewById(R.id.txtValorA);
         spinner1 = view.findViewById(R.id.spinner);
         spinner2 = view.findViewById(R.id.spinner1);
+        btnSiguienteMercancia = view.findViewById(R.id.btnSiguienteMercancia);
 
     }
 
@@ -131,6 +135,13 @@ public class MercanciaFragment extends Fragment {
         }else {
             Toast.makeText(getContext(), "Faltan campos por ingresar", Toast.LENGTH_SHORT).show();
         }
+        btnSiguienteMercancia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), RiesgoFormulario.class));
+
+            }
+        });
     }
 
 }
