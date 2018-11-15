@@ -2,6 +2,7 @@ package software.ragp.com.projectotemporal.fragments;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import software.ragp.com.projectotemporal.R;
@@ -106,8 +108,26 @@ public class MercanciaFragment extends Fragment {
             txtValor.setError("Por favor ingrese este campo");
         }
 
-        if (nValidar>=5){
+        if (spinner1.getSelectedItem().toString().equals(spinner2.getSelectedItem().toString())){
+            nValidar++;
+        }else {
+            TextView errorText = (TextView)spinner1.getSelectedView();
+            TextView errorText1 = (TextView)spinner2.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);
+            errorText.setText("El origen y el destino no pueden ser iguales");
+            errorText1.setError("");
+            errorText1.setTextColor(Color.RED);
+            errorText1.setText("El origen y el destino no pueden ser iguales");
+        }
+
+        if (nValidar>=6){
             inputData();
+
+
+        }else if (!spinner1.getSelectedItem().toString().equals(spinner2.getSelectedItem().toString())){
+            Toast.makeText(getContext(), "El origen y el destino no pueden ser iguales", Toast.LENGTH_SHORT).show();
+
         }else {
             Toast.makeText(getContext(), "Faltan campos por ingresar", Toast.LENGTH_SHORT).show();
         }
