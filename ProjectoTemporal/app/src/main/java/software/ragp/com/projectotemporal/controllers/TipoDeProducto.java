@@ -15,24 +15,7 @@ public class TipoDeProducto extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tipo_de_producto);
 
-        getSupportActionBar().setLogo(R.drawable.cajalista);
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
 
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-
-        return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()){
-
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
