@@ -7,4 +7,51 @@
     android:background="@drawable/fondoapp"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/txtBuscar"
+            android:layout_width="254dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_login"
+            android:ems="10"
+            android:hint="Código"
+            android:inputType="number"
+            android:paddingLeft="15sp"
+            android:paddingRight="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="177dp" />
+
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/buscar" />
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:backgroundTint="@color/gris"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/nuevo" />
+
+
 </android.support.constraint.ConstraintLayout>
