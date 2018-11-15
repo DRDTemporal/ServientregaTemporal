@@ -6,7 +6,7 @@ public class Constans {
     public static final String TABLE_ENCARGO="CREATE TABLE ENCARGO(IDENCARGO INTEGER PRIMARY KEY AUTOINCREMENT, " +
             "TIPOOBJ TEXT, PESO TEXT, VALORD TEXT, ORIGEN TEXT, DESTINO TEXT, LARGO TEXT, ALTO TEXT, " +
             "ANCHO TEXT, TIPORIESGO TEXT, CANTIDAD TEXT, ESCALARIESGO TEXT, ESTADO TEXT, " +
-            "OBJETOEX TEXT, DESCRIPCION TEXT, FECHA TEXT);";
+            "OBJETOEX TEXT, DESCRIPCION TEXT, FECHA TEXT, NOMBRE TEXT, APELLIDO TEXT, TELEFONO TEXT, DOCUMENTO TEXT, CORREO TEXT, DIRECCION TEXT);";
 
     public static final String [] listaDepartamentos ={
             "Amazonas-Leticia", "Antioquia-Medellín", "Arauca-Arauca", "Atlántico-Barranquilla",

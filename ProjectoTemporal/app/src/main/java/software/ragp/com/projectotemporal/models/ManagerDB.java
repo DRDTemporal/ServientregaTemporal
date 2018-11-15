@@ -57,6 +57,12 @@ public class ManagerDB {
         values.put("OBJETOEX", encargo.getObjetoEx());
         values.put("DESCRIPCION", encargo.getDescripcion());
         values.put("FECHA",encargo.getFecCreacion());
+        values.put("NOMBRE",encargo.getNombre());
+        values.put("APELLIDO",encargo.getApellido());
+        values.put("TELEFONO",encargo.getTelefono());
+        values.put("DOCUMENTO",encargo.getDocumento());
+        values.put("CORREO",encargo.getCorreo());
+        values.put("DIRECCION",encargo.getDireccion());
         db.insert("ENCARGO",null,values);
         closeDB();
     }
@@ -78,6 +84,12 @@ public class ManagerDB {
         values.put("OBJETOEX", encargo.getObjetoEx());
         values.put("DESCRIPCION", encargo.getDescripcion());
         values.put("FECHA",encargo.getFecCreacion());
+        values.put("NOMBRE",encargo.getNombre());
+        values.put("APELLIDO",encargo.getApellido());
+        values.put("TELEFONO",encargo.getTelefono());
+        values.put("DOCUMENTO",encargo.getDocumento());
+        values.put("CORREO",encargo.getCorreo());
+        values.put("DIRECCION",encargo.getDireccion());
         db.update("ENCARGO",values,"IDENCARGO="+encargo.getId(),null);
         closeDB();
     }
@@ -105,6 +117,12 @@ public class ManagerDB {
                 encargo.setObjetoEx(cursor.getString(13));
                 encargo.setDescripcion(cursor.getString(14));
                 encargo.setFecCreacion(cursor.getString(15));
+                encargo.setNombre(cursor.getString(16));
+                encargo.setApellido(cursor.getString(17));
+                encargo.setTelefono(cursor.getString(18));
+                encargo.setDocumento(cursor.getString(19));
+                encargo.setCorreo(cursor.getString(20));
+                encargo.setDireccion(cursor.getString(21));
                 results.add(encargo);
 
             }while (cursor.moveToNext());
@@ -138,6 +156,12 @@ public class ManagerDB {
                 encargo.setObjetoEx(cursor.getString(13));
                 encargo.setDescripcion(cursor.getString(14));
                 encargo.setFecCreacion(cursor.getString(15));
+                encargo.setNombre(cursor.getString(16));
+                encargo.setApellido(cursor.getString(17));
+                encargo.setTelefono(cursor.getString(18));
+                encargo.setDocumento(cursor.getString(19));
+                encargo.setCorreo(cursor.getString(20));
+                encargo.setDireccion(cursor.getString(21));
                 results.add(encargo);
 
             }while (cursor.moveToNext());

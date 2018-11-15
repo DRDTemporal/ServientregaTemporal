@@ -4,7 +4,8 @@ public class Encargo {
     private int id;
     private String tipoObj, peso, valorD, origen, destino,
             largo, alto, ancho,tipoRiesgo, cantidad, escalaDeRiesgo,
-            estado,objetoEx, descripcion, fecCreacion;
+            estado,objetoEx, descripcion, fecCreacion,
+            nombre, apellido, telefono, documento, correo, direccion;
 
 
     public int getId() {
@@ -133,5 +134,53 @@ public class Encargo {
 
     public void setFecCreacion(String fecCreacion) {
         this.fecCreacion = fecCreacion;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 }
