@@ -73,9 +73,8 @@ public class EncuestaFormulario extends AppCompatActivity {
     }
 
     private void finalizarTodo() {
-
         RiesgoFormulario.riesgoFormulario.finish();
-
+        TipoDeProducto.tipoDeProducto.finish();
         finish();
     }
 
