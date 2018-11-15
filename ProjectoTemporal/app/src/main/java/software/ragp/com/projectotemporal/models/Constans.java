@@ -18,4 +18,8 @@ public class Constans {
             "Valle del Cauca-Cali", "Vaupés-Mitú", "Vichada-Puerto Carreño"
     };
 
+    public static final String [] listaMaterial={
+            "Riesgo Biológico","Cristal","Liquido","Electrónico","Riesgo Eléctrico"
+    };
+
 }
