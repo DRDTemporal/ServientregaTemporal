@@ -12,24 +12,25 @@
         android:roundIcon="@drawable/logoapp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controllers.EncuestaFormulario" />
-        <activity android:name=".controllers.TipoDeProducto" />
+        <activity android:name=".controllers.EncuestaFormulario" android:screenOrientation="portrait" />
+        <activity android:name=".controllers.TipoDeProducto" android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".controllers.RiesgoFormulario" />
-        <activity android:name=".controllers.DatosCliente" />
-        <activity android:name=".controllers.ListaDeEntregas" />
-        <activity android:name=".controllers.DetalleEntrega"></activity>
+        <activity android:name=".controllers.RiesgoFormulario" android:screenOrientation="portrait" />
+        <activity android:name=".controllers.DatosCliente" android:screenOrientation="portrait" />
+        <activity android:name=".controllers.ListaDeEntregas" android:screenOrientation="portrait" />
+        <activity android:name=".controllers.DetalleEntrega" android:screenOrientation="portrait" />
+        <activity android:name=".controllers.Escaner" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

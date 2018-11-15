@@ -85,6 +85,7 @@ public class EncuestaFormulario extends AppCompatActivity {
         RiesgoFormulario.riesgoFormulario.finish();
         TipoDeProducto.tipoDeProducto.finish();
         DatosCliente.datosCliente.finish();
+        Escaner.escaner.finish();
         float x1, x2,x3;
         try {
             x1 = (Float.parseFloat(TipoDeProducto.encargo.getAlto()))+2;

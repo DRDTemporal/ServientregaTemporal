@@ -87,11 +87,11 @@ public class RiesgoFormulario extends AppCompatActivity {
         TipoDeProducto.encargo.setTipoRiesgo(spTipoM.getSelectedItem().toString());
         try {
 
-            Toast.makeText(riesgoFormulario, ""+sbRiesgo.getProgress(), Toast.LENGTH_SHORT).show();
+
         }catch (Exception e){
 
         }
-        startActivity(new Intent(RiesgoFormulario.this,EncuestaFormulario.class));
+        startActivity(new Intent(RiesgoFormulario.this,Escaner.class));
 
 
     }
