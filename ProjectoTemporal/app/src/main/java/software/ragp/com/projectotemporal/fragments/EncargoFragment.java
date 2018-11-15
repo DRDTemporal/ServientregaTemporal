@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import software.ragp.com.projectotemporal.R;
 import software.ragp.com.projectotemporal.controllers.RiesgoFormulario;
+import software.ragp.com.projectotemporal.controllers.TipoDeProducto;
 import software.ragp.com.projectotemporal.models.Constans;
 
 /**
@@ -71,6 +72,7 @@ public class EncargoFragment extends Fragment implements View.OnClickListener {
     }
 
     public  void validar() {
+        validaciones=0;
         if (!txtPeso.getText().equals(""))
         {
             validaciones++;
@@ -106,8 +108,19 @@ public class EncargoFragment extends Fragment implements View.OnClickListener {
 
         if(validaciones==3)
         {
-            Intent intent = new Intent(getContext(), RiesgoFormulario.class);
-            startActivity(intent);
+            inputData();
         }
+    }
+
+    private void inputData() {
+        TipoDeProducto.encargo.setPeso(txtPeso.getText().toString());
+        TipoDeProducto.encargo.setLargo("");
+        TipoDeProducto.encargo.setAlto("");
+        TipoDeProducto.encargo.setAncho("");
+        TipoDeProducto.encargo.setValorD(txtValor.getText().toString());
+        TipoDeProducto.encargo.setOrigen(spinnerOrigen.getSelectedItem().toString());
+        TipoDeProducto.encargo.setDestino(spinnerDestino.getSelectedItem().toString());
+        Intent intent = new Intent(getContext(), RiesgoFormulario.class);
+        startActivity(intent);
     }
 }

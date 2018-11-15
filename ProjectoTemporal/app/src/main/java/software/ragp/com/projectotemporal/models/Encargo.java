@@ -4,7 +4,8 @@ public class Encargo {
     private int id;
     private String tipoObj, peso, valorD, origen, destino,
             largo, alto, ancho,tipoRiesgo, cantidad, escalaDeRiesgo,
-            estado,objetoEx, descripcion;
+            estado,objetoEx, descripcion, fecCreacion;
+
 
     public int getId() {
         return id;
@@ -124,5 +125,13 @@ public class Encargo {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getFecCreacion() {
+        return fecCreacion;
+    }
+
+    public void setFecCreacion(String fecCreacion) {
+        this.fecCreacion = fecCreacion;
     }
 }

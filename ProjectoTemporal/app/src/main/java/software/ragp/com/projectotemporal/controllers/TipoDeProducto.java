@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import software.ragp.com.projectotemporal.R;
 import software.ragp.com.projectotemporal.fragments.EncargoFragment;
 import software.ragp.com.projectotemporal.fragments.MercanciaFragment;
@@ -22,6 +25,8 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
     android.support.v4.app.FragmentManager manager;
     TextView txtTitulo;
     public static TipoDeProducto tipoDeProducto;
+    Date date = new Date();
+    SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,8 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
         manager.beginTransaction().replace(R.id.fragment, new EncargoFragment()).commit();
         txtTitulo.setText("Documento");
         tipoDeProducto = this;
+        encargo.setTipoObj("Documento");
+        encargo.setFecCreacion(dateFormat.format(date));
 
     }
 
@@ -45,17 +52,22 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
         switch (v.getId())
         {
             case R.id.btnDocumento:
                 manager.beginTransaction().replace(R.id.fragment, new EncargoFragment()).commit();
                 txtTitulo.setText("Documento");
+                encargo.setTipoObj("Documento");
+                encargo.setFecCreacion(dateFormat.format(date));
                 break;
 
             case R.id.btnPaquete:
                 manager.beginTransaction().replace(R.id.fragment, new MercanciaFragment()).commit();
                 txtTitulo.setText("Mercancía");
+                encargo.setTipoObj("Mercancía");
+                encargo.setFecCreacion(dateFormat.format(date));
                 break;
         }
 

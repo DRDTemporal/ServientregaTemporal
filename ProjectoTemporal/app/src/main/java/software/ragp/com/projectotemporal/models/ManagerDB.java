@@ -56,6 +56,7 @@ public class ManagerDB {
         values.put("ESTADO", encargo.getEstado());
         values.put("OBJETOEX", encargo.getObjetoEx());
         values.put("DESCRIPCION", encargo.getDescripcion());
+        values.put("FECHA",encargo.getFecCreacion());
         db.insert("ENCARGO",null,values);
         closeDB();
     }
@@ -76,6 +77,7 @@ public class ManagerDB {
         values.put("ESTADO", encargo.getEstado());
         values.put("OBJETOEX", encargo.getObjetoEx());
         values.put("DESCRIPCION", encargo.getDescripcion());
+        values.put("FECHA",encargo.getFecCreacion());
         db.update("ENCARGO",values,"IDENCARGO="+encargo.getId(),null);
         closeDB();
     }
@@ -102,6 +104,7 @@ public class ManagerDB {
                 encargo.setEstado(cursor.getString(12));
                 encargo.setObjetoEx(cursor.getString(13));
                 encargo.setDescripcion(cursor.getString(14));
+                encargo.setFecCreacion(cursor.getString(15));
                 results.add(encargo);
 
             }while (cursor.moveToNext());
@@ -134,6 +137,7 @@ public class ManagerDB {
                 encargo.setEstado(cursor.getString(12));
                 encargo.setObjetoEx(cursor.getString(13));
                 encargo.setDescripcion(cursor.getString(14));
+                encargo.setFecCreacion(cursor.getString(15));
                 results.add(encargo);
 
             }while (cursor.moveToNext());

@@ -75,25 +75,14 @@ public class RiesgoFormulario extends AppCompatActivity {
 
     private void inputData() {
         TipoDeProducto.encargo.setCantidad(txtCantidad.getText().toString());
-
-        sbRiesgo.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                nRiesgo=progress;
-                TipoDeProducto.encargo.setCantidad(Integer.toString(nRiesgo));
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
+        TipoDeProducto.encargo.setEscalaDeRiesgo(String.valueOf(sbRiesgo.getProgress()));
         TipoDeProducto.encargo.setTipoRiesgo(spTipoM.getSelectedItem().toString());
+        try {
+
+            Toast.makeText(riesgoFormulario, ""+sbRiesgo.getProgress(), Toast.LENGTH_SHORT).show();
+        }catch (Exception e){
+
+        }
         startActivity(new Intent(RiesgoFormulario.this,EncuestaFormulario.class));
 
 
