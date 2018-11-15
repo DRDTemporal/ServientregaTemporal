@@ -19,7 +19,7 @@
             <EditText
                 android:id="@+id/txtPeso"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
@@ -44,11 +44,11 @@
             <EditText
                 android:id="@+id/txtValor"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:hint="Valor declarado"
                 android:background="@drawable/btn_form"
+                android:hint="Valor declarado"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -66,10 +66,10 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:background="@drawable/btn_form"
+                android:layout_height="40dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_height="50dp">
+                android:background="@drawable/btn_form">
 
                 <TextView
                     android:id="@+id/textView2"
@@ -110,10 +110,10 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:background="@drawable/btn_form"
-                android:layout_marginRight="8dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="8dp"
-                android:layout_height="50dp">
+                android:layout_marginRight="8dp"
+                android:background="@drawable/btn_form">
 
 
                 <TextView
@@ -138,7 +138,6 @@
                     android:layout_marginEnd="18dp"
                     android:layout_toEndOf="@+id/textView3"
                     app:layout_constraintStart_toEndOf="@+id/textView3" />
-
 
 
             </RelativeLayout>
