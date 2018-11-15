@@ -23,7 +23,7 @@ public class EncuestaFormulario extends AppCompatActivity {
     RadioButton btnSi;
     RadioButton btnNo;
     Button btnFinalizar;
-
+    public static EncuestaFormulario encuestaFormulario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class EncuestaFormulario extends AppCompatActivity {
         setContentView(R.layout.activity_encuesta_formulario);
         inizialite();
         inputList();
+        encuestaFormulario = this;
 
     }
 
@@ -77,6 +78,8 @@ public class EncuestaFormulario extends AppCompatActivity {
     private void finalizarTodo() {
         RiesgoFormulario.riesgoFormulario.finish();
         TipoDeProducto.tipoDeProducto.finish();
+        DatosCliente.datosCliente.finish();
+        EncuestaFormulario.encuestaFormulario.finish();
         finish();
     }
 

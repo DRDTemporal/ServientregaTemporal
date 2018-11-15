@@ -47,6 +47,7 @@ public class ManagerDB {
         values.put("VALORD", encargo.getValorD());
         values.put("ORIGEN", encargo.getOrigen());
         values.put("DESTINO", encargo.getDestino());
+        values.put("PESO", encargo.getPeso());
         values.put("LARGO", encargo.getLargo());
         values.put("ALTO", encargo.getAlto());
         values.put("ANCHO", encargo.getAncho());

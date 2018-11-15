@@ -80,7 +80,7 @@ public class MercanciaFragment extends Fragment{
         TipoDeProducto.encargo.setAncho(txtAncho.getText().toString());
         TipoDeProducto.encargo.setValorD(txtValor.getText().toString());
         TipoDeProducto.encargo.setOrigen(spinner1.getSelectedItem().toString());
-        TipoDeProducto.encargo.setDescripcion(spinner2.getSelectedItem().toString());
+        TipoDeProducto.encargo.setDestino(spinner2.getSelectedItem().toString());
         startActivity(new Intent(getContext(),EncuestaFormulario.class));
 
     }
@@ -119,7 +119,7 @@ public class MercanciaFragment extends Fragment{
             txtValor.setError("Por favor ingrese este campo");
         }
 
-        if (spinner1.getSelectedItem().toString().equals(spinner2.getSelectedItem().toString())){
+        if (!spinner1.getSelectedItem().toString().equals(spinner2.getSelectedItem().toString())){
             nValidar++;
         }else {
             TextView errorText = (TextView)spinner1.getSelectedView();
@@ -137,7 +137,7 @@ public class MercanciaFragment extends Fragment{
             startActivity(new Intent(getContext(), RiesgoFormulario.class));
 
 
-        }else if (!spinner1.getSelectedItem().toString().equals(spinner2.getSelectedItem().toString())){
+        }else if (spinner1.getSelectedItem().toString().equals(spinner2.getSelectedItem().toString())){
             Toast.makeText(getContext(), "El origen y el destino no pueden ser iguales", Toast.LENGTH_SHORT).show();
 
         }else {

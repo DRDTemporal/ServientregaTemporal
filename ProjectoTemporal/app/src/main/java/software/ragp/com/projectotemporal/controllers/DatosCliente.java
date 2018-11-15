@@ -14,7 +14,7 @@ public class DatosCliente extends AppCompatActivity {
 
     Button btnSiguiente;
     TextView txtDocumento, txtNombre, txtApellido, txtTelefono,txtEmail,txtDireccion;
-
+    public static DatosCliente datosCliente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +31,7 @@ public class DatosCliente extends AppCompatActivity {
                 validar();
             }
         });
+        datosCliente = this;
 
     }
 
