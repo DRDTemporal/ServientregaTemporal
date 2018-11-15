@@ -3,4 +3,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="peso">Peso (Kg)</string>
+    <string name="largo">Largo (cm)</string>
+    <string name="alto">Alto (cm)</string>
+    <string name="ancho">Ancho (cm)</string>
+    <string name="valord">Valor declarado</string>
 </resources>
