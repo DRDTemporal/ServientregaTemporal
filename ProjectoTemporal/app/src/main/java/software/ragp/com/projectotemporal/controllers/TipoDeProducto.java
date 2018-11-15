@@ -26,6 +26,8 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_tipo_de_producto);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         initialize();
         manager.beginTransaction().replace(R.id.fragment, new EncargoFragment()).commit();
         txtTitulo.setText("Documento");

@@ -11,5 +11,7 @@ public class RiesgoFormulario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_riesgo_formulario);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
