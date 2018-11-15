@@ -1,6 +1,7 @@
 package software.ragp.com.projectotemporal;
 
 import android.Manifest;
+import android.app.ActionBar;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        getSupportActionBar().setTitle("Inicio");
+
+        getSupportActionBar().setTitle("ServiApp");
         getSupportActionBar().setIcon(R.drawable.inicio);
         btnCambio= findViewById(R.id.btnBuscar);
         btnExportar = findViewById(R.id.btnExportar);
