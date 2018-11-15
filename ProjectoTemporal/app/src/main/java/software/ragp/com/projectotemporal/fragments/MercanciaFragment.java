@@ -48,7 +48,7 @@ public class MercanciaFragment extends Fragment{
         btnSiguienteMercancia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), RiesgoFormulario.class));
+                validar();
 
             }
         });
@@ -134,6 +134,7 @@ public class MercanciaFragment extends Fragment{
 
         if (nValidar>=6){
             inputData();
+            startActivity(new Intent(getContext(), RiesgoFormulario.class));
 
 
         }else if (!spinner1.getSelectedItem().toString().equals(spinner2.getSelectedItem().toString())){
