@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import software.ragp.com.projectotemporal.R;
 import software.ragp.com.projectotemporal.fragments.EncargoFragment;
@@ -19,6 +20,7 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
     Button btnDocumento;
     Button btnPaquete;
     android.support.v4.app.FragmentManager manager;
+    TextView txtTitulo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,7 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_tipo_de_producto);
         initialize();
         manager.beginTransaction().replace(R.id.fragment, new EncargoFragment()).commit();
+        txtTitulo.setText("Documento");
 
 
     }
@@ -36,7 +39,7 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
         btnDocumento.setOnClickListener(this);
         btnPaquete=findViewById(R.id.btnPaquete);
         btnPaquete.setOnClickListener(this);
-
+        txtTitulo = findViewById(R.id.txtTipoPaquete);
     }
 
     @Override
@@ -46,10 +49,12 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
         {
             case R.id.btnDocumento:
                 manager.beginTransaction().replace(R.id.fragment, new EncargoFragment()).commit();
+                txtTitulo.setText("Documento");
                 break;
 
             case R.id.btnPaquete:
                 manager.beginTransaction().replace(R.id.fragment, new MercanciaFragment()).commit();
+                txtTitulo.setText("Mercancía");
                 break;
         }
 
