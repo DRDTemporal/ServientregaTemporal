@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="gris">#878381</color>
     <color name="verdeClaro">#009817</color>
+    <color name="trasparente">#00009817</color>
 </resources>
