@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spTipoMa"
         android:layout_width="0dp"
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
@@ -44,11 +44,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <SeekBar
-        android:id="@+id/seekBar2"
+        android:id="@+id/sbRiesgo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:max="3"
         android:progress="0"
@@ -56,4 +56,16 @@
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCantidad" />
+
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Siguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbRiesgo" />
 </android.support.constraint.ConstraintLayout>
