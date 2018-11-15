@@ -2,7 +2,9 @@ package software.ragp.com.projectotemporal.models;
 
 public class Encargo {
     private int id;
-    private String tipoObj, peso, valorD, origen, destino, largo, alto, ancho,tipoRiesgo, cantidad, escalaDeRiesgo, estado,objetoEx, descripcion;
+    private String tipoObj, peso, valorD, origen, destino,
+            largo, alto, ancho,tipoRiesgo, cantidad, escalaDeRiesgo,
+            estado,objetoEx, descripcion;
 
     public int getId() {
         return id;
