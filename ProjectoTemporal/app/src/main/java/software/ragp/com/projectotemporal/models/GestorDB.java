@@ -14,7 +14,6 @@ public class GestorDB extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Constans.TABLE_ENCARGO);
-        db.execSQL(Constans.TABLE_MERCANCIA);
     }
 
     @Override
