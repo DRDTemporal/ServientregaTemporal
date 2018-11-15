@@ -17,7 +17,7 @@ import software.ragp.com.projectotemporal.R;
 import software.ragp.com.projectotemporal.models.ManagerDB;
 
 public class EncuestaFormulario extends AppCompatActivity {
-
+    //Declaración de variables
     ArrayList<String> estado = new ArrayList<>();
     Spinner spinnerEstado;
     EditText txtDescripcion;
@@ -38,6 +38,7 @@ public class EncuestaFormulario extends AppCompatActivity {
 
     }
 
+    //Método parar inicializar las vistas
     private void inizialite() {
         spinnerEstado=findViewById(R.id.spinnerEstado);
         txtDescripcion = findViewById(R.id.txtDescripcion);
@@ -52,6 +53,7 @@ public class EncuestaFormulario extends AppCompatActivity {
         });
     }
 
+    //Método para ingresar las opciones al spinner
     private void inputList() {
         estado.add("Bueno");
         estado.add("Malo");
@@ -61,6 +63,7 @@ public class EncuestaFormulario extends AppCompatActivity {
 
     }
 
+    //Método para guardar la clse encargo del MainActivity a la base de datos
     private void inputData() {
         TipoDeProducto.encargo.setDescripcion(txtDescripcion.getText().toString());
         TipoDeProducto.encargo.setEstado(spinnerEstado.getSelectedItem().toString());
@@ -77,6 +80,7 @@ public class EncuestaFormulario extends AppCompatActivity {
 
     }
 
+    //Método para finalizar todos los Activitys
     private void finalizarTodo() {
         RiesgoFormulario.riesgoFormulario.finish();
         TipoDeProducto.tipoDeProducto.finish();

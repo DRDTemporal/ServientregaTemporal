@@ -19,6 +19,7 @@ public class DetalleEntrega extends AppCompatActivity {
         inputData();
     }
 
+    //Método para inicializar loas vistas
     private void inizialite() {
         txtTexto1 = findViewById(R.id.txtTexto1);
         txtTexto2 = findViewById(R.id.txtTexto2);
@@ -26,6 +27,7 @@ public class DetalleEntrega extends AppCompatActivity {
         encargo = ListaDeEntregas.encargo;
     }
 
+    //Método para ingresar los datos a los tres Texviews
     private void inputData() {
         String texto1= encargo.getDocumento()+" "+ encargo.getNombre()+" "+encargo.getApellido()+"\n"+
                 encargo.getDireccion()+"\n"+encargo.getTelefono()+" "+encargo.getCorreo();

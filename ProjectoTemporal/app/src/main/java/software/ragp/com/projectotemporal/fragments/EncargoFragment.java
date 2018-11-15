@@ -46,6 +46,7 @@ public class EncargoFragment extends Fragment implements View.OnClickListener {
         return view;
     }
 
+    //Método parar inicializar las vistas
     private void initialize() {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,Constans.listaDepartamentos);
         spinnerDestino=view.findViewById(R.id.spinnerDestino);
@@ -71,6 +72,7 @@ public class EncargoFragment extends Fragment implements View.OnClickListener {
 
     }
 
+    //Método para comprobar que los datos esten completos
     public  void validar() {
         validaciones=0;
         if (!txtPeso.getText().toString().equals(""))
@@ -112,6 +114,7 @@ public class EncargoFragment extends Fragment implements View.OnClickListener {
         }
     }
 
+    //Método para guardar temporalmete los datos de está Activity
     private void inputData() {
         TipoDeProducto.encargo.setPeso(txtPeso.getText().toString());
         TipoDeProducto.encargo.setLargo("");

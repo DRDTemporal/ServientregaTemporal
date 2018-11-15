@@ -19,6 +19,7 @@ import software.ragp.com.projectotemporal.fragments.MercanciaFragment;
 import software.ragp.com.projectotemporal.models.Encargo;
 
 public class TipoDeProducto extends AppCompatActivity implements View.OnClickListener {
+    //Declaración de variables
     public static Encargo encargo = new Encargo();
     Button btnDocumento;
     Button btnPaquete;
@@ -27,6 +28,7 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
     public static TipoDeProducto tipoDeProducto;
     Date date = new Date();
     SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +45,7 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
 
     }
 
+    //Método parar inicializar las vistas
     private void initialize() {
         manager = getSupportFragmentManager();
         btnDocumento=findViewById(R.id.btnDocumento);

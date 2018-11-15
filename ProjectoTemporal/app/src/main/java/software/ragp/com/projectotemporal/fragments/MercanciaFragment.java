@@ -55,6 +55,7 @@ public class MercanciaFragment extends Fragment{
         return view;
     }
 
+    //Método parar inicializar las vistas
     private void inizliate() {
         txtPeso = view.findViewById(R.id.txtPeso);
         txtLargo = view.findViewById(R.id.txtLargo);
@@ -67,12 +68,14 @@ public class MercanciaFragment extends Fragment{
 
     }
 
+    //Método para ingresar los datos a los spinners
     private void inputLists() {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,Constans.listaDepartamentos);
         spinner1.setAdapter(adapter);
         spinner2.setAdapter(adapter);
     }
 
+    //Método para guardar temporalmete los datos de está Activity
     private void inputData(){
         TipoDeProducto.encargo.setPeso(txtPeso.getText().toString());
         TipoDeProducto.encargo.setLargo(txtLargo.getText().toString());
@@ -84,6 +87,7 @@ public class MercanciaFragment extends Fragment{
 
     }
 
+    //Método para comprobar que los datos esten completos
     private void validar(){
         nValidar=0;
         if (txtAlto.getText().toString().length()>0){

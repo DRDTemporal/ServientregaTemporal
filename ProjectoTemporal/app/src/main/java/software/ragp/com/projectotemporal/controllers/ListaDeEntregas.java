@@ -26,6 +26,7 @@ public class ListaDeEntregas extends AppCompatActivity {
         inputAdapter();
     }
 
+    //Método para ingresar el adaptador al recyclerview
     private void inputAdapter() {
         ManagerDB managerDB = ManagerDB.getInstance(this);
         final List<Encargo> encargos = managerDB.selectAllEncargo();

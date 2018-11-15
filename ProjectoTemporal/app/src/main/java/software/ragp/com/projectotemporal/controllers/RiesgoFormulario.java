@@ -18,6 +18,7 @@ import software.ragp.com.projectotemporal.R;
 import software.ragp.com.projectotemporal.models.Constans;
 
 public class RiesgoFormulario extends AppCompatActivity {
+    //Declaración de variables
     Spinner spTipoM;
     EditText txtCantidad;
     SeekBar sbRiesgo;
@@ -25,6 +26,7 @@ public class RiesgoFormulario extends AppCompatActivity {
     int nValidar=0;
     int nRiesgo=0;
     public static RiesgoFormulario riesgoFormulario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,7 @@ public class RiesgoFormulario extends AppCompatActivity {
         riesgoFormulario = this;
     }
 
+    //Método parar inicializar las vistas
     private void inizialite() {
         spTipoM = findViewById(R.id.spTipoMa);
         txtCantidad = findViewById(R.id.txtCantidad);
@@ -44,11 +47,13 @@ public class RiesgoFormulario extends AppCompatActivity {
         btnSiguiente = findViewById(R.id.btnSiguiente);
     }
 
+    //Método para ingresar las opciones al spinner
     private void inputList() {
         ArrayAdapter<String> materiales = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,Constans.listaMaterial);
         spTipoM.setAdapter(materiales);
     }
 
+    //Método para agregar el OnClickListener
     private void escucharBoton() {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +63,7 @@ public class RiesgoFormulario extends AppCompatActivity {
         });
     }
 
+    //Método para comprobar que todos lks campos esten correctamente ingresasdos
     private void validar() {
         nValidar = 0;
         if (txtCantidad.getText().toString().length()>0){
@@ -74,7 +80,7 @@ public class RiesgoFormulario extends AppCompatActivity {
 
     }
 
-
+    //Método para guardar temporalmete los datos de está Activity
     private void inputData() {
         TipoDeProducto.encargo.setCantidad(txtCantidad.getText().toString());
         TipoDeProducto.encargo.setEscalaDeRiesgo(String.valueOf(sbRiesgo.getProgress()));

@@ -42,6 +42,7 @@ import software.ragp.com.projectotemporal.models.ManagerDB;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Declaración de variables
     private final int MY_PERMISSIONS_REQUEST_READ_CONTACTS=100;
     Button btnCambio;
     Button btnExportar,btnEnviados;
@@ -105,11 +106,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Método para cambiar de vista
     public void enviar(View view) {
         Intent intent = new Intent(MainActivity.this, DatosCliente.class);
         startActivity(intent);
     }
 
+    //Método para porder escribir y leer elk almacenamiento
     private void pedirPermiso() {
 
         if (ContextCompat.checkSelfPermission(this,
@@ -143,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Método para exportar un archivo csv de las entregas
     private void exportarEnCSV() {
 
         final Dialog dialog = new Dialog(MainActivity.this);
@@ -233,6 +237,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    //Método para mostrar las medidas correspondientes de la caja
     public static void abrirPopUp(){
         final Dialog dialog = new Dialog(mainActivity);
         dialog.setContentView(R.layout.item_caja);

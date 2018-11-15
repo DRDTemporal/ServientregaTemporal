@@ -35,6 +35,7 @@ public class DatosCliente extends AppCompatActivity {
 
     }
 
+    //Método para inicializar las vistas
     private void inizialite() {
         btnSiguiente = findViewById(R.id.btnSiguiente);
         txtApellido = findViewById(R.id.txtApellidos);
@@ -45,6 +46,7 @@ public class DatosCliente extends AppCompatActivity {
         txtTelefono = findViewById(R.id.txtTelefono);
     }
 
+    //Método para comprobar que los campos esten correctamente ingresados
     private void validar() {
         int nValidar =0;
 
@@ -92,6 +94,7 @@ public class DatosCliente extends AppCompatActivity {
 
     }
 
+    //Método para guardar los datos temporalmente
     private void inputData() {
         TipoDeProducto.encargo.setNombre(txtNombre.getText().toString());
         TipoDeProducto.encargo.setApellido(txtApellido.getText().toString());

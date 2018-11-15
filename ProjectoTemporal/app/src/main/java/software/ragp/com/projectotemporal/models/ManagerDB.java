@@ -26,20 +26,22 @@ public class ManagerDB {
         return intanceOne;
     }
 
+    //Método ´para abrir la base de datos en modo lectura
     private void openWriteDB(){
         db = gestorDB.getWritableDatabase();
     }
 
+    //Método ´para abrir la base de datos en modo escritura
     private void openReadDB(){
         db = gestorDB.getReadableDatabase();
     }
 
-
+    //Método ´para cerrar la base de datos
     private void closeDB(){
         db.close();
     }
 
-
+    //Método para ingrear un encargo
     public void insertEncargo(Encargo encargo){
         openWriteDB();
         ContentValues values = new ContentValues();
@@ -95,6 +97,7 @@ public class ManagerDB {
         closeDB();
     }
 
+    //Método para consultar todos los encargos
     public List<Encargo> selectAllEncargo(){
         List<Encargo> results = new ArrayList<>();
         openReadDB();
