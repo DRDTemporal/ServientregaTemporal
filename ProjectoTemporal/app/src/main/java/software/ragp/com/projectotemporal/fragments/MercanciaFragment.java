@@ -45,6 +45,13 @@ public class MercanciaFragment extends Fragment{
         view= inflater.inflate(R.layout.fragment_mercancia, container, false);
         inizliate();
         inputLists();
+        btnSiguienteMercancia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), RiesgoFormulario.class));
+
+            }
+        });
         return view;
     }
 
@@ -135,13 +142,7 @@ public class MercanciaFragment extends Fragment{
         }else {
             Toast.makeText(getContext(), "Faltan campos por ingresar", Toast.LENGTH_SHORT).show();
         }
-        btnSiguienteMercancia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getContext(), RiesgoFormulario.class));
 
-            }
-        });
     }
 
 }

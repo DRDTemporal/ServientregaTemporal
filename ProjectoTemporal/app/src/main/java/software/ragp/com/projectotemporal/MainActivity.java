@@ -7,11 +7,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toolbar;
 
 import software.ragp.com.projectotemporal.controllers.TipoDeProducto;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button btnCambio;
 
 
     @Override
@@ -23,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Inicio");
         getSupportActionBar().setIcon(R.drawable.inicio);
+        btnCambio= findViewById(R.id.btnBuscar);
+        btnCambio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                enviar(v);
+            }
+        });
 
     }
 
@@ -49,4 +59,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, TipoDeProducto.class);
         startActivity(intent);
     }
+
+
 }

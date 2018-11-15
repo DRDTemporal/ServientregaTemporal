@@ -67,18 +67,12 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/fragment"
             android:layout_width="match_parent"
-            android:layout_marginTop="20dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
 
 
-            <fragment
-                android:id="@+id/fragment"
-                android:name="software.ragp.com.projectotemporal.fragments.EncargoFragment"
-                android:layout_width="373dp"
-                android:layout_height="350dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
     </LinearLayout>

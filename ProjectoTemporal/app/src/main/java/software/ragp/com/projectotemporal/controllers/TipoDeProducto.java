@@ -22,17 +22,19 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initialize();
+
         setContentView(R.layout.activity_tipo_de_producto);
+        initialize();
+        manager.beginTransaction().replace(R.id.fragment, new EncargoFragment()).commit();
 
 
     }
 
     private void initialize() {
         manager = getSupportFragmentManager();
-        btnDocumento.findViewById(R.id.btnDocumento);
+        btnDocumento=findViewById(R.id.btnDocumento);
         btnDocumento.setOnClickListener(this);
-        btnPaquete.findViewById(R.id.btnPaquete);
+        btnPaquete=findViewById(R.id.btnPaquete);
         btnPaquete.setOnClickListener(this);
 
     }
@@ -44,7 +46,7 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
         {
             case R.id.btnDocumento:
                 manager.beginTransaction().replace(R.id.fragment, new EncargoFragment()).commit();
-            break;
+                break;
 
             case R.id.btnPaquete:
                 manager.beginTransaction().replace(R.id.fragment, new MercanciaFragment()).commit();
