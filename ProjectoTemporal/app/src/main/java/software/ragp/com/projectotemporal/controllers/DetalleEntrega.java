@@ -14,6 +14,7 @@ public class DetalleEntrega extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_entrega);
+        getSupportActionBar().setTitle("Detalle");
         inizialite();
         inputData();
     }

@@ -34,6 +34,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import software.ragp.com.projectotemporal.controllers.DatosCliente;
+import software.ragp.com.projectotemporal.controllers.ListaDeEntregas;
 import software.ragp.com.projectotemporal.controllers.TipoDeProducto;
 import software.ragp.com.projectotemporal.models.Encargo;
 import software.ragp.com.projectotemporal.models.ManagerDB;
@@ -73,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
         btnEnviados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListaDeEntregas.class);
+                startActivity(intent);
 
             }
         });
