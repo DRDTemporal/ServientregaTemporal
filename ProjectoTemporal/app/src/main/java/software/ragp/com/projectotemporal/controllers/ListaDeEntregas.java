@@ -22,6 +22,7 @@ public class ListaDeEntregas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_de_entregas);
         recyclerView = findViewById(R.id.recyclerView);
+        getSupportActionBar().setTitle("Enviados");
         inputAdapter();
     }
 
