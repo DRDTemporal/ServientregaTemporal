@@ -68,7 +68,7 @@ public class EncuestaFormulario extends AppCompatActivity {
         }
         ManagerDB managerDB = ManagerDB.getInstance(this);
         managerDB.insertEncargo(TipoDeProducto.encargo);
-        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Se ha guardado correctamente", Toast.LENGTH_SHORT).show();
         finalizarTodo();
 
 

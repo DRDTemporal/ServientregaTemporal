@@ -175,7 +175,8 @@ public class MainActivity extends AppCompatActivity {
                     CSVWriter csvWrite = new CSVWriter(new FileWriter(archivo));
                     String titulos [] ={
                             "ID","Tipo de Objeto", "Peso","Valor Destinado", "Origen", "Destino", "Largo", "Alto",
-                            "Ancho","Tipo de Material","Cantidad","Escala de Riego","Estado","Objetos Extraños", "Descripción","Fecha de Creación"
+                            "Ancho","Tipo de Material","Cantidad","Escala de Riego","Estado","Objetos Extraños", "Descripción",
+                            "Fecha de Creación","Documento","Nombres","Apellidos","Telefono","Dirección","Correo"
                     };
                     csvWrite.writeNext(titulos);
                     for (int i=0; i<tmpDatos1.size();i++) {
@@ -183,7 +184,8 @@ public class MainActivity extends AppCompatActivity {
                         String arrStr[] = {String.valueOf(tmpDatos.getId()),tmpDatos.getTipoObj(),tmpDatos.getPeso(),
                                 tmpDatos.getValorD(), tmpDatos.getOrigen(),tmpDatos.getDestino(),tmpDatos.getLargo(),
                                 tmpDatos.getAlto(),tmpDatos.getAncho(),tmpDatos.getTipoRiesgo(), tmpDatos.getCantidad(),tmpDatos.getEscalaDeRiesgo(),
-                                tmpDatos.getEstado(),tmpDatos.getObjetoEx(),tmpDatos.getDescripcion(),tmpDatos.getFecCreacion()
+                                tmpDatos.getEstado(),tmpDatos.getObjetoEx(),tmpDatos.getDescripcion(),tmpDatos.getFecCreacion(),
+                                tmpDatos.getNombre(),tmpDatos.getApellido(),tmpDatos.getTelefono(),tmpDatos.getDireccion(),tmpDatos.getCorreo()
                         };
 
                         csvWrite.writeNext(arrStr);
