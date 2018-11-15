@@ -32,6 +32,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import software.ragp.com.projectotemporal.controllers.DatosCliente;
 import software.ragp.com.projectotemporal.controllers.TipoDeProducto;
 import software.ragp.com.projectotemporal.models.Encargo;
 import software.ragp.com.projectotemporal.models.ManagerDB;
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void enviar(View view) {
-        Intent intent = new Intent(MainActivity.this, TipoDeProducto.class);
+        Intent intent = new Intent(MainActivity.this, DatosCliente.class);
         startActivity(intent);
     }
 

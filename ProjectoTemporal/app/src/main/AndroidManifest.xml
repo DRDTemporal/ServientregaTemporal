@@ -20,12 +20,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".controllers.EncuestaFormulario" />
-        <activity android:name=".controllers.TipoDeProducto"></activity>
+        <activity android:name=".controllers.TipoDeProducto" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <activity android:name=".controllers.RiesgoFormulario"></activity>
+
+        <activity android:name=".controllers.RiesgoFormulario" />
+        <activity android:name=".controllers.DatosCliente"></activity>
     </application>
 
 </manifest>
