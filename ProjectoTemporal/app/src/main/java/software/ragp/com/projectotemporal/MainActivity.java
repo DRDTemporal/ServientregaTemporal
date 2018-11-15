@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final int MY_PERMISSIONS_REQUEST_READ_CONTACTS=100;
     Button btnCambio;
-    Button btnExportar;
+    Button btnExportar,btnEnviados;
     File archivo;
 
     @Override
@@ -55,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("ServiApp");
         getSupportActionBar().setIcon(R.drawable.inicio);
-        btnCambio= findViewById(R.id.btnBuscar);
+        btnCambio= findViewById(R.id.btnNuevo);
         btnExportar = findViewById(R.id.btnExportar);
+        btnEnviados = findViewById(R.id.btnEnviados);
         btnExportar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 enviar(v);
+            }
+        });
+        btnEnviados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

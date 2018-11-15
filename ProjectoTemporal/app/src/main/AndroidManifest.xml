@@ -27,7 +27,9 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".controllers.RiesgoFormulario" />
-        <activity android:name=".controllers.DatosCliente"></activity>
+        <activity android:name=".controllers.DatosCliente" />
+        <activity android:name=".controllers.ListaDeEntregas" />
+        <activity android:name=".controllers.DetalleEntrega"></activity>
     </application>
 
 </manifest>
