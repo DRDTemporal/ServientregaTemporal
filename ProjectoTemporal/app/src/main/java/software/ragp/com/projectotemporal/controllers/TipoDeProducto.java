@@ -7,9 +7,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import software.ragp.com.projectotemporal.R;
+import software.ragp.com.projectotemporal.models.Encargo;
 
 public class TipoDeProducto extends AppCompatActivity {
-
+    public static Encargo encargo = new Encargo();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

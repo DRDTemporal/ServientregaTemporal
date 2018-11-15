@@ -8,7 +8,7 @@ public class Constans {
             "ANCHO TEXT, TIPORIESGO TEXT, CANTIDAD TEXT, ESCALARIESGO TEXT, ESTADO TEXT, " +
             "OBJETOEX TEXT, DESCRIPCION TEXT);";
 
-    public static final String [] listaDEpartamentos ={
+    public static final String [] listaDepartamentos ={
             "Amazonas-Leticia", "Antioquia-Medellín", "Arauca-Arauca", "Atlántico-Barranquilla",
             "Bolívar-Cartagena de Indias", "Boyacá-Tunja", "Caldas-Manizales", "Caquetá-Florencia", "Casanare-Yopal",
             "Cauca-Popayán", "Cesar-Valledupar", "Chocó-Quibdó", "Córdoba-Montería", "Cundinamarca-Bogotá", "Guainía-Inírida",

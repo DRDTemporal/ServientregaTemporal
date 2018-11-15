@@ -1,15 +1,22 @@
 package software.ragp.com.projectotemporal.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import software.ragp.com.projectotemporal.R;
+import software.ragp.com.projectotemporal.controllers.EncuestaFormulario;
+import software.ragp.com.projectotemporal.controllers.TipoDeProducto;
+import software.ragp.com.projectotemporal.models.Constans;
+import software.ragp.com.projectotemporal.models.Encargo;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +26,8 @@ public class MercanciaFragment extends Fragment {
     View view;
     EditText txtPeso, txtLargo, txtAlto, txtAncho, txtValor;
     Spinner spinner1, spinner2;
+    Encargo encargo = new Encargo();
+    int nValidar;
     public MercanciaFragment() {
         // Required empty public constructor
     }
@@ -30,6 +39,7 @@ public class MercanciaFragment extends Fragment {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_mercancia, container, false);
         inizliate();
+        inputLists();
         return view;
     }
 
@@ -41,6 +51,66 @@ public class MercanciaFragment extends Fragment {
         txtValor = view.findViewById(R.id.txtValorA);
         spinner1 = view.findViewById(R.id.spinner);
         spinner2 = view.findViewById(R.id.spinner1);
+
+    }
+
+    private void inputLists() {
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,Constans.listaDepartamentos);
+        spinner1.setAdapter(adapter);
+        spinner2.setAdapter(adapter);
+    }
+
+    private void inputData(){
+        TipoDeProducto.encargo.setPeso(txtPeso.getText().toString());
+        TipoDeProducto.encargo.setLargo(txtLargo.getText().toString());
+        TipoDeProducto.encargo.setAlto(txtAlto.getText().toString());
+        TipoDeProducto.encargo.setAncho(txtAncho.getText().toString());
+        TipoDeProducto.encargo.setValorD(txtValor.getText().toString());
+        TipoDeProducto.encargo.setOrigen(spinner1.getSelectedItem().toString());
+        TipoDeProducto.encargo.setDescripcion(spinner2.getSelectedItem().toString());
+        startActivity(new Intent(getContext(),EncuestaFormulario.class));
+
+    }
+
+    private void validar(){
+        nValidar=0;
+        if (txtAlto.getText().toString().length()>0){
+            nValidar++;
+        }else {
+            txtAlto.setError("Por favor ingrese este campo");
+        }
+
+        if (txtAncho.getText().toString().length()>0){
+            nValidar++;
+        }else {
+            txtAncho.setError("Por favor ingrese este campo");
+        }
+
+
+        if (txtLargo.getText().toString().length()>0){
+            nValidar++;
+        }else {
+            txtLargo.setError("Por favor ingrese este campo");
+        }
+
+
+        if (txtPeso.getText().toString().length()>0){
+            nValidar++;
+        }else {
+            txtPeso.setError("Por favor ingrese este campo");
+        }
+
+        if (txtValor.getText().toString().length()>0){
+            nValidar++;
+        }else {
+            txtValor.setError("Por favor ingrese este campo");
+        }
+
+        if (nValidar>=5){
+            inputData();
+        }else {
+            Toast.makeText(getContext(), "Faltan campos por ingresar", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
