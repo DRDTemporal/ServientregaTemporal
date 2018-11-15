@@ -81,7 +81,6 @@ public class MercanciaFragment extends Fragment{
         TipoDeProducto.encargo.setValorD(txtValor.getText().toString());
         TipoDeProducto.encargo.setOrigen(spinner1.getSelectedItem().toString());
         TipoDeProducto.encargo.setDestino(spinner2.getSelectedItem().toString());
-        startActivity(new Intent(getContext(),EncuestaFormulario.class));
 
     }
 

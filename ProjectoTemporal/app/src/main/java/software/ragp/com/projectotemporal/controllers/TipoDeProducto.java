@@ -33,7 +33,7 @@ public class TipoDeProducto extends AppCompatActivity implements View.OnClickLis
 
         setContentView(R.layout.activity_tipo_de_producto);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         initialize();
         manager.beginTransaction().replace(R.id.fragment, new EncargoFragment()).commit();
         txtTitulo.setText("Documento");

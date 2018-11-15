@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import software.ragp.com.projectotemporal.MainActivity;
 import software.ragp.com.projectotemporal.R;
 import software.ragp.com.projectotemporal.models.ManagerDB;
 
@@ -28,7 +29,7 @@ public class EncuestaFormulario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Encuesta");
         setContentView(R.layout.activity_encuesta_formulario);
         inizialite();
@@ -68,10 +69,10 @@ public class EncuestaFormulario extends AppCompatActivity {
         }else {
             TipoDeProducto.encargo.setObjetoEx("No");
         }
+        finalizarTodo();
         ManagerDB managerDB = ManagerDB.getInstance(this);
         managerDB.insertEncargo(TipoDeProducto.encargo);
         Toast.makeText(this, "Se ha guardado correctamente", Toast.LENGTH_SHORT).show();
-        finalizarTodo();
 
 
     }
@@ -80,7 +81,19 @@ public class EncuestaFormulario extends AppCompatActivity {
         RiesgoFormulario.riesgoFormulario.finish();
         TipoDeProducto.tipoDeProducto.finish();
         DatosCliente.datosCliente.finish();
-        EncuestaFormulario.encuestaFormulario.finish();
+        float x1, x2,x3;
+        try {
+            x1 = (Float.parseFloat(TipoDeProducto.encargo.getAlto()))+2;
+            x2 = (Float.parseFloat(TipoDeProducto.encargo.getAncho()))+2;
+            x3 = (Float.parseFloat(TipoDeProducto.encargo.getLargo()))+2;
+            MainActivity.alto=x1;
+            MainActivity.ancho=x2;
+            MainActivity.largo=x3;
+            MainActivity.mainActivity.abrirPopUp();
+        }catch (Exception e){
+
+        }
+
         finish();
     }
 

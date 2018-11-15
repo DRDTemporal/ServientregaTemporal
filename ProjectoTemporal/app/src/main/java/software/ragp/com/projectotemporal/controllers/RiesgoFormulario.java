@@ -32,7 +32,7 @@ public class RiesgoFormulario extends AppCompatActivity {
         inizialite();
         inputList();
         escucharBoton();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Riesgos");
         riesgoFormulario = this;
     }

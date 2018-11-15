@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -45,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
     Button btnCambio;
     Button btnExportar,btnEnviados;
     File archivo;
-
+    public static float alto;
+    public static float largo;
+    public static float ancho;
+    public static MainActivity mainActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mainActivity=this;
 
     }
 
@@ -228,6 +233,25 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    public static void abrirPopUp(){
+        final Dialog dialog = new Dialog(mainActivity);
+        dialog.setContentView(R.layout.item_caja);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        TextView txtMensaje = dialog.findViewById(R.id.txtMensaje);
+        Button btnAceptar = dialog.findViewById(R.id.btnAceptar);
+        String mensaje = "Las dimensiones adecuadas para la caja son: \n"+
+                "Alto(cm): "+alto+"\n Ancho(cm):"+ancho+"\n Largo(cm):"+largo;
+        txtMensaje.setText(mensaje);
+        btnAceptar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+        dialog.setCancelable(true);
+        dialog.show();
+
+    }
 
 
 }
