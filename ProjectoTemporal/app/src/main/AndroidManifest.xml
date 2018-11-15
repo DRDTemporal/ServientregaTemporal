@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".controllers.EncuestaFormulario" />
-        <activity android:name=".controllers.TipoDeProducto" />
+        <activity android:name=".controllers.TipoDeProducto"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
         <activity android:name=".controllers.RiesgoFormulario"></activity>
     </application>
 
